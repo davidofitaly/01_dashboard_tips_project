@@ -10,7 +10,15 @@ import plotly.graph_objects as go
 tips_data = sns.load_dataset('tips')
 
 # DASH APPLICATION
-app = dash.Dash(__name__)
+dash.register_page(__name__, path='/distribution', name="Distribution 📈")
+
+# STYLE CSS
+dropdown_style = {
+    'fontFamily': 'Arial, sans-serif',
+    'fontWeight': 'bold',
+    'fontSize': '16px',
+    'color': '#333333'
+}
 
 # DROP MENU
 dropdown = dcc.Dropdown(
@@ -28,11 +36,13 @@ dropdown = dcc.Dropdown(
         {'label': '10. pie_breast -> Pie Breast (number of bills by part size)', 'value': 'chart10'},
         {'label': '11. histogram -> Histogram (distribution of the variable size', 'value': 'chart11'},
         {'label': '12. histogram -> Histogram (distribution of the variable total_bill)', 'value': 'chart12'},
-    ]
+    ], style=dropdown_style
 )
 
 # APP LAYOUT
-app.layout = html.Div([
+layout = html.Div([
+    html.Br(),
+    html.H6('Select Chart:', style=dropdown_style),
     dropdown,
     html.Div(id='charts-output')
 ])
@@ -212,7 +222,7 @@ def create_histogram_2():
 
 
 # CALLBACK
-@app.callback(
+@callback(
     Output('charts-output', 'children'),
     [Input('selection-charts', 'value')]
 )
@@ -242,6 +252,3 @@ def update_charts(select):
     elif select == 'chart12':
         return dcc.Graph(figure=create_histogram_2())
 
-
-if __name__ == '__main__':
-    app.run_server(debug=True, port=8000)

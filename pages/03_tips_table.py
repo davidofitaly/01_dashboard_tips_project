@@ -3,7 +3,7 @@ from dash import dash_table
 from dash import html
 import seaborn as sns
 
-dash.register_page(__name__, path='/tips_table', name='Dataset 📋')
+dash.register_page(__name__, path='/tips_table', name='Dataset 𝄜')
 
 # LOAD DATASET
 tips_data = sns.load_dataset('tips')
