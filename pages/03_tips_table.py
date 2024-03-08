@@ -1,6 +1,7 @@
 import dash
 from dash import dash_table
-from dash import html
+from dash import html, callback
+from dash.dependencies import Input, Output
 import seaborn as sns
 
 dash.register_page(__name__, path='/tips_table', name='Dataset 𝄜')
@@ -16,6 +17,7 @@ layout = html.Div(
             columns=[{'name': col, 'id': col, 'type': 'numeric' if tips_data[col].dtype.kind in 'biufc' else 'text'}
                      for col in tips_data.columns],
             data=tips_data.to_dict('records'),
+            export_format = 'xlsx',
             editable=True,
             filter_action='native',
             sort_action='native',
@@ -24,6 +26,9 @@ layout = html.Div(
             page_size=20,
             column_selectable='multi',
             row_selectable='multi',
+            row_deletable=True,
+            selected_columns=[],
+            selected_rows=[],
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(230, 230, 230)',
@@ -40,8 +45,8 @@ layout = html.Div(
                     'backgroundColor': 'rgb(248, 248, 248)'
                 }
             ]
-        )
+        ),
+
     ]
 )
-
 

@@ -13,7 +13,7 @@ app.layout = html.Div([
 	html.Br(),
 	html.P("Tip Analysis: Utilizing Seaborn 'Tips' Data", className="text-dark text-center fw-bold fs-1"),
     html.Div(children=[
-	    dcc.Link(page['name'], href=page["relative_path"], className="btn btn-dark m-2 fs-5")\
+	    dcc.Link(page['name'], href=page["relative_path"], className="btn btn-dark m-2 fs-5")
 			  for page in dash.page_registry.values()]
 	),
 	dash.page_container
