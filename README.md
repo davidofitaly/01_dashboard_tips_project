@@ -4,27 +4,27 @@ This project provides an interactive dashboard for analyzing tips data using Das
 
 ## Clone
 
-1. Clone the repository to your local machine:
+Clone the repository to your local machine:
 
 
-  git clone https://github.com/davidofitaly/01_dashboard_tips_project.git
+git clone https://github.com/davidofitaly/01_dashboard_tips_project.git
 
 
 ## Install 
 
-2. Install the required dependencies using pip:
+Install the required dependencies using pip:
 
-  pip install -r requirements.txt
+pip install -r requirements.txt
 
 ## Usage
 
-1.Navigate to the project directory:
+Navigate to the project directory:
 
-  cd 01_dashboard_tips_project.git
+cd 01_dashboard_tips_project.git
 
-2. Run the Dash application:
+Run the Dash application:
 
-  python app.py
+python app.py
 
 ## Pages
 
