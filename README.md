@@ -2,12 +2,13 @@
 
 This project provides an interactive dashboard for analyzing tips data using Dash Plotly, displaying various visualizations and insights derived from the 'Tips' dataset.
 
-
 ## Clone
 
 1. Clone the repository to your local machine:
-``bash
+
+```bash
 git clone https://github.com/davidofitaly/01_dashboard_tips_project.git
+
 
 ## Install 
 
