@@ -3,19 +3,19 @@
 This project provides an interactive dashboard for analyzing tips data using Dash Plotly, displaying various visualizations and insights derived from the 'Tips' dataset.
 
 
-##Clone
+## Clone
 
 1. Clone the repository to your local machine:
 
 git clone https://github.com/davidofitaly/01_dashboard_tips_project.git
 
-##Install 
+## Install 
 
 2. Install the required dependencies using pip:
 
 pip install -r requirements.txt
 
-##Usage
+## Usage
 
 1.Navigate to the project directory:
 
@@ -25,7 +25,7 @@ cd 01_dashboard_tips_project.git
 
 python app.py
 
-##Pages
+## Pages
 Main Site 🌍
 The main site provides links to different sections of the dashboard.
 
