@@ -4,6 +4,7 @@ This project provides an interactive dashboard for analyzing tips data using Das
 
 ```
 1. Clone the repository to your local machine:
+
 git clone https://github.com/davidofitaly/01_dashboard_tips_project.git
 
 
