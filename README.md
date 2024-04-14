@@ -43,5 +43,8 @@ Offers various charts and visualizations for exploring the distribution and rela
 External Stylesheets
 The dashboard utilizes external Bootstrap CSS for enhanced styling.
 
+## Youtube
+[Link to the project video on YouTube](https://youtu.be/x1U6PSGOaLo)
+
 ## Contributors
 [Dawid Włoch](https://github.com/davidofitaly)
